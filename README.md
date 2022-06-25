@@ -1,44 +1,40 @@
-patentanalysis
-==============================
 
-Analyze and visualize the patent data
+---
+title: "README"
+author: "Suresh"
+date: "6/24/2022"
+output: html_document
+---
 
-Project Organization
-------------
+This project focuses on analyzing the patent information retrieved from the patentsview API. The PatentsView API is intended to inspire the exploration and enhanced understanding of US intellectual property (IP) and innovation systems.
 
-    ├── LICENSE
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so patentanalysis can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── patentanalysis <- Main package folder
-    │   │   └── __init__.py    <- Marks as package
-    │   │   └── patentanalysis.py  <- Just some placeholder Python source code file
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+The base endpoint url for the patent API is given as follows.
+
+Patentsview (https://patentsview.org/apis/api-endpoints/patents)
+This API version does not require any API key and has the following query parameters embedded to the url.
+
+q - query paramters (Ex: patent_inv_country : "US")
+f - JSON response fields (Ex: [patent_number", "patent_title", "patent_date"])
+s - sort the results (Ex: "patent_number":"asc")
+o - result options (Ex: "per_page": 10000)
+
+Data Files:
+
+* patent_details.json - Patent details retrieved from the API.
+
+* PatentDataAnalysis.ipynb is the jupyter notebook containing the data analysis and visualization of patent data.
+
+* patent_barchart.py is the python file containing streamlit visualizations.
 
 
---------
+In case you don't have all of the necessary packages installed, here is a code you can run in jupyter notebook.
 
-<p><small>Project based on a simplified version of the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+```
+$ conda install -c plotly plotly=4.14.3
+$ pip install streamlit
+$ conda install -c anaconda ipywidgets
+```
+
+To run streamlit from anaconda prompt, run the following command from the project folder.
+
+streamlit run patent_barchart.py
