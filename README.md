@@ -1,9 +1,7 @@
 Patent Data Analysis
 ---
 title: "README"
-
 author: "Suresh"
-
 date: "6/24/2022"
 output: html_document
 ---
