@@ -1,4 +1,4 @@
-Patent Data Analysis
+# Patent Data Analysis
 
 This project focuses on analyzing the patent information retrieved from the patentsview API. The PatentsView API is intended to inspire the exploration and enhanced understanding of US intellectual property (IP) and innovation systems.
 
