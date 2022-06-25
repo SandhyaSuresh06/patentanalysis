@@ -1,10 +1,4 @@
 Patent Data Analysis
----
-title: "README"
-author: "Suresh"
-date: "6/24/2022"
-output: html_document
----
 
 This project focuses on analyzing the patent information retrieved from the patentsview API. The PatentsView API is intended to inspire the exploration and enhanced understanding of US intellectual property (IP) and innovation systems.
 
