@@ -18,6 +18,8 @@ Data Files:
 
 * PatentDataAnalysis.ipynb is the jupyter notebook containing the data analysis and visualization of patent data.
 
+* PatentDataAnalysis.html is the html version of the jupyter notebook and is available in the reports folder.
+
 * patent_barchart.py is the python file containing streamlit visualizations.
 
 
@@ -29,6 +31,6 @@ $ pip install streamlit
 $ conda install -c anaconda ipywidgets
 ```
 
-To run streamlit from anaconda prompt, run the following command from the project folder.
+To run streamlit from anaconda prompt, run the following command from the project notebooks folder.
 
 streamlit run patent_barchart.py
